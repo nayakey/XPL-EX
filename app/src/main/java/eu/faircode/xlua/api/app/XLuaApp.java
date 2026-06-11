@@ -56,7 +56,7 @@ public class XLuaApp extends XLuaAppBase implements ISerial, IDBSerial, IJsonSer
         Log.i(TAG, "To Got bundle spoofing: " + this.packageName + this.toString());
         try {
             b.putString("app", toJSON());
-            XLog.i("APP TO BUNDLE: " + b.getString("app"));
+            XLog.i("APP TO BUNDLE: " + b.getString("app") );
         }catch (Exception e) {
             Log.e(TAG, "[toBundle] to JSON Error App: " + this.packageName + " e=" + e + " stack=\n" + Log.getStackTraceString(e));
             b.putString("app", "{ }");
